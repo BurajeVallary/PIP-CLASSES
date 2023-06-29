@@ -218,6 +218,49 @@ class NigerianRecipe(var specialIngredient: String, ingredients: Array<String>, 
 }
 
 
+// 3. **Wildlife Preservation:** You're a wildlife conservationist working on a
+// program to track different species in a national park. Each species has its own
+// characteristics and behaviors, such as its diet, typical lifespan, migration
+// patterns, etc. Some species might be predators, others prey. You'll need to
+// create classes to model `Species`, `Predator`, `Prey`, etc., and think about how
+// These classes might relate to each other through inheritance.
+
+fun main() {
+    val animal1 = Predator("Leopard", "meat", "30yrs", "East to West", "spot and stalk")
+    println(animal1.speciesInfo())
+    val animal2 = Prey("Antelope", "grass", "20yrs", "seasonal", "lying flat on ground")
+    println(animal2.speciesInfo())
+   val animal3=Animal("Lion","Meat","50yrs","West
+    to East","Roar")
+ 
+ 
+ 
+ 
+ }
+ 
+ 
+ 
+ 
+ open class Species(val name: String, val diet: String, val lifespan: String, val migrationPatterns: String) {
+   open fun speciesInfo(): String {
+        return "$name feeds on $diet, it has a lifespan of $lifespan and migrates $migrationPatterns"
+    }
+ }
+ class Predator(name: String, diet: String, lifespan: String, migrationPatterns: String, val huntingMethod: String) : Species(name, diet, lifespan, migrationPatterns) {
+    override fun speciesInfo(): String {
+        return super.speciesInfo()
+    }
+    
+ }
+ 
+ 
+ class Prey(name: String, diet: String, lifespan: String, migrationPatterns: String, val defenseMechanism: String) : Species(name, diet, lifespan, migrationPatterns) {
+    override fun speciesInfo(): String {
+        return super.speciesInfo()
+    }
+ 
+
+
 
 
 
